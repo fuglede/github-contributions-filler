@@ -51,5 +51,6 @@ func main() {
 	if err != nil {
 		log.Fatal("Could not get registration date from GitHub: ", err)
 	}
-	makeDates(registrationDate, lastDate, 3600000000)
+	// We use a mean of 1800000 milliseconds = half an hour
+	makeDates(registrationDate, lastDate, 1800000)
 }
